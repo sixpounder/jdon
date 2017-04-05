@@ -96,8 +96,7 @@ class Document {
       let doc = new clsImpl();
       doc.draftVersion = draftVersion;
 
-      doc.fillWith(obj);
-      return doc;
+      return doc.parse(obj);      
     } else {
       throw new Error(valid.errors);
     }

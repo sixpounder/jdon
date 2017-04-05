@@ -8,13 +8,14 @@ const schemas = [{
 ];
 
 schemas.byVersion = (v) => {
+  let found = null;
   schemas.forEach(item => {
     if(item.version === v) {
-      return item.schema;
+      found = item.schema;
     }
   });
 
-  return null;
+  return found;  
 }
 
 module.exports = schemas;

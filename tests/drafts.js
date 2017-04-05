@@ -7,7 +7,7 @@ const mocks = [
 module.exports = new Promise((resolve, reject) => {
   mocks.forEach(mock => {
     try {
-      let doc = Document.fromJDON(mock);
+      let doc = Document.parse(mock);
     } catch (e) {
       return reject(e);
     }

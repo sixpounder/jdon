@@ -23,7 +23,7 @@ class JDONValidator {
 
   validate(string) {
     let ajv = new Ajv();
-    let validator = ajv.compile(schemas.byVersion(this.version));
+    let validator = ajv.compile(schemas.byVersion(this._version));
     return validator(string);
   }
 }
