@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jdon.io/draft-01",
+  "title": "dojr",
+  "type": "object",
+  "name": {
+    "type": "string"
+  },
+  "locales": {
+    "type": "object",
+    "patternProperties": {
+
+      "[A-Z]{2}\\-[a-z]{2}": {
+
+        "type": "object",
+
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+
+          "fragments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "topology": {
+                  "oneOf": ["heading", "body", "image", "embed"]
+                },
+                "content": {
+                  "type": "string"
+                },
+                "mimetype": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  },
+
+  "required": ["name"]
+}

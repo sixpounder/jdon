@@ -1,0 +1,14 @@
+{
+  "name": "jdon",
+  "version": "1.0.0",
+  "description": "Javascript Document Notation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sixpounder",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^4.11.5"
+  }
+}
