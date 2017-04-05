@@ -4,16 +4,16 @@
     "IT-it": {
       "title": "Documento semplice",
       "fragments": [
-        { "topology": "heading", "content": "Esempio di un documento jdon", "mimetype": "text/plain" },
-        { "topology": "body", "content": "Semplice implementazione di un corpo del testo", "mimetype": "text/plain" }
+        { "role": "heading", "content": "Esempio di un documento jdon" },
+        { "role": "body", "content": "Semplice implementazione di un corpo del testo", "transforms": ["markdown"] }
       ]
     },
 
     "EN-en": {
       "title": "Simple document",
       "fragments": [
-        { "topology": "heading", "content": "JDON document example", "mimetype": "text/plain" },
-        { "topology": "body", "content": "Simple text body implementation", "mimetype": "text/plain" }
+        { "role": "heading", "content": "JDON document example" },
+        { "role": "body", "content": "Simple text body implementation", "transforms": ["markdown"] }
       ]
     }
   }

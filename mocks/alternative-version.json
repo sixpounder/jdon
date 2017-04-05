@@ -1,0 +1,37 @@
+{
+  "name": "Simple document",
+  "version": "0.2",
+
+  "fragments": [
+
+    {
+      "role": "heading",
+      "content": "Esempio di un documento jdon",
+      "language": "IT-it",
+      "translations": [
+        {
+          "EN-en": "JDON example document"
+        },
+        {
+          "DE-de": "RAMMSTEIN (I can't speak german)"
+        }
+      ]
+    },
+
+    {
+      "role": "body",
+      "content": "Semplice implementazione di un corpo del testo",
+      "locale": "IT-it",
+      "transforms": ["markdown"]
+    }
+
+  ],
+
+  "authors": [
+    {
+      "name": "Andrea Coronese",
+      "email": "sixpounder@protonmail.com"
+    }
+  ]
+
+}

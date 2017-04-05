@@ -9,9 +9,8 @@ const converter = function JSONConverter(jsonAsString) {
   if(valid) {
     let obj = JSON.parse(jsonAsString);
     let doc = new Document();
-    // doc._original = {};
-    // Object.assign(doc._original, obj);
-
+    doc.version = obj.version;
+    
     // For each locale
     Object.keys(obj.locales).each((lCode) => {
       let newLocale = doc.locales.push(new DocumentLocale(lCode));
@@ -39,6 +38,14 @@ const converter = function JSONConverter(jsonAsString) {
 class Document {
 
   constructor() {
+
+  }
+
+  /**
+   * Serializes this document to a JDON string.
+   * @return {string} The json serialization of this object, compliant with the JDON schema
+   */
+  toJDON() {
 
   }
 
