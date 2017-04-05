@@ -1,20 +1,29 @@
 const Ajv = require('ajv');
+const schemas = require('./schemas');
+
 const DEFAULT_DRAFT_VERSION = '02';
 
 class JDONValidator {
+
+  static forVersion(version) {
+    let v = new JDONValidator();
+    v.version = version;
+
+    return v;
+  }
 
   set version(v) {
     this._version = v ? v : DEFAULT_DRAFT_VERSION;
   }
   get version() { return this._version; }
 
-  constructor(version) {
+  constructor(version = DEFAULT_DRAFT_VERSION) {
     this.version = version;
   }
 
-  static validate(string) {
+  validate(string) {
     let ajv = new Ajv();
-    let validator = ajv.compile(require(`./schemas/document-draft-${this.version}.json`));
+    let validator = ajv.compile(schemas.byVersion(this.version));
     return validator(string);
   }
 }

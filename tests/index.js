@@ -8,5 +8,5 @@ Promise.all(tests).then(() => {
   console.log(chalk.green("Completed with no errors"));
 }, err => {
   console.log(err);
-  console.log(chalk.orange("Completed with errors"));
+  console.log(chalk.red("Completed with errors"));
 });
